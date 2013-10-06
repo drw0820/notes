@@ -1,0 +1,10 @@
+1.重写HashCode。
+使用org.apache.commons.lang.builder.HashCodeBulider。
+exp：new HashCodeBulider().append(name).toHashCode();
+2.序列化拷贝对象。
+使用org.apache.commons.lang.SerializationUtils。
+3.计算金额采用BigDecimal和RoundingModel配合。
+exp：
+BigDecimal b = new BigDecimal(88888);
+BigDecimal c = new BigDecimal(0.01232*3);
+BigDecimal bc = b.multiply(c).setScale(2, RoundingMode.HALF_EVEN);（银行家算法）
