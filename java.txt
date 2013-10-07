@@ -8,3 +8,8 @@ exp：
 BigDecimal b = new BigDecimal(88888);
 BigDecimal c = new BigDecimal(0.01232*3);
 BigDecimal bc = b.multiply(c).setScale(2, RoundingMode.HALF_EVEN);（银行家算法）
+4.中文汉字排序。
+常用的汉字可用Collator排序，需要严格排序则可以使用pinyin4j把汉字转为拼音，再自己实现排序。
+5.遍历方式。
+无序的集合实现了RandomAccess接口，使用下标方式更快。
+有序的集合使用foreach遍历方式更快。
